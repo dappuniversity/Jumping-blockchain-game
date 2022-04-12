@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumping game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="player"></div>
+        <p id="score"></p>
+        <p id="nftScore"></p>
+
+        <div class="grid-container hide">
+            <div class="grid-item" id="1" onclick="mintOrSelect(this);"></div>
+            <div class="grid-item" id="2" onclick="mintOrSelect(this);"></div>
+            <div class="grid-item" id="3" onclick="mintOrSelect(this);"></div>  
+            <div class="grid-item" id="4" onclick="mintOrSelect(this);"></div>
+            <div class="grid-item" id="5" onclick="mintOrSelect(this);"></div>
+            <div class="grid-item" id="6" onclick="mintOrSelect(this);"></div>  
+            <div class="grid-item" id="7" onclick="mintOrSelect(this);"></div>
+            <div class="grid-item" id="8" onclick="mintOrSelect(this);"></div>
+            <div class="grid-item" id="9" onclick="mintOrSelect(this);"></div>  
+            <div class="grid-item" id="10" onclick="mintOrSelect(this);"></div>  
+          </div>
+          
+    </div>
+
+    <script>
+        const player1 = document.getElementsByClassName("player")[0]
+        let currentSkin = localStorage.getItem("currentSkin");
+
+        const att = document.createAttribute("style");
+        att.value = `content:url(${currentSkin})`
+        player1.setAttributeNode(att);
+    </script>
+
+    <button onclick="connectMetamask()">connect wallet</button>
+        
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+    <script src="index.js"></script>
+    <script src="blockchain.js"></script>
+    
+</body>
+</html>

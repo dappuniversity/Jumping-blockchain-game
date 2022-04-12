@@ -1,0 +1,53 @@
+.container {
+    width: 500px;
+    height: 700px;
+    background-color: aqua;
+    /* the container is relative to the browser */
+    position: relative;
+    font-size: 50px;
+    text-align: center;
+}
+
+.player {
+    width: 50px;
+    height: 75px;
+    background-color: green;
+    position: absolute;
+}
+
+.nft {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    content:url("nft.png");
+    position: absolute;
+    z-index: 2;
+}
+
+.ground {
+    width: 75px;
+    height: 15px;
+    background-color: hotpink;
+    /* position of ground is abosulute to the platform */
+    position: absolute;
+    z-index: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: #2196F3; */
+    padding: 10px;
+  }
+  .grid-item {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    content:url("nft.png");
+  }
+
+
+.hide {
+    visibility: hidden;
+}
